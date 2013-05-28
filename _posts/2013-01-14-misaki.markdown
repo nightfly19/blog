@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Misaki"
+date: 2013-01-14 00:00:00
+categories: [mew]
+tags: [meta, Clojure, Misaki]
+description: "My first experiences with the Misaki site generator"
+---
+After my friends success with it I'm trying out [Misaki](https://github.com/liquidz/misaki) for my professional/personal site. I tend to update rather infrequently and am running this on a rather stable but resource limited VPS, so a dynamic site is kinda overkill for my needs. Since Misaki just renders to flat files it will let me do tons of cool Clojure-y stuff to generate my content, but not require me to manage a Java virtual machine on a 128Mb system.
+
+So far I'm reasonably pleased with it. I've spent doing the usual design stuff and learning the Misaki way. Misaki provides plenty of convenience functions for generating basic but otherwise long-to-type HTML/hiccup statements. Misaki provides an interesting and practical, if not entirely intuitive, method of generating and formatting content.
+
+I really like how Misaki handles laying out content. Each page can specify a layout, and layouts can be composed in layers. A characteristic example of this is how each blog post specifies the 'post' layout, when the 'post' layout is finished it passes it's content onto the 'default' layout. These layout names simply being conventions supplied with the sample blog, they can be changed and each page or post can be specified to use different ones.
+
+I'm not overly fond of a lot of how a lot of things in Misaki feel like magic though. I'd much rather call functions to set the meta-data for pages then have it parse the initial comments in the file. And I really dispise how I can't seem to control what gets loaded into the namespace. I've really grown to love LISP-y package systems and Clojure's namespaces, and I feel like I've lost a lot of that control when working with Misaki.

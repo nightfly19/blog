@@ -1,13 +1,18 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Blog
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div class="posts">
+  {% for post in site.posts limit:3 %}
+  <div class="post">
+    <h3> <a href="{{ post.url }}">{{ post.title }}</a> </h3>
+    <span>{{ post.date | date_to_string }}</span>
+    <p>
+      {{ post.content }}
+    </p>
+  </div>
+  {% endfor %}
 </div>
+
+<a href="/archive.html">Archive</a>
