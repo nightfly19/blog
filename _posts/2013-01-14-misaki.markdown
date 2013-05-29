@@ -2,8 +2,8 @@
 layout: post
 title: "Misaki"
 date: 2013-01-14 00:00:00
-categories: [mew]
-tags: [meta, Clojure, Misaki]
+categories: [blogging]
+tags: [meta, Clojure, Misaki, blogging]
 summary: "My first experiences with the Misaki site generator"
 ---
 After my friends success with it I'm trying out [Misaki](https://github.com/liquidz/misaki) for my professional/personal site. I tend to update rather infrequently and am running this on a rather stable but resource limited VPS, so a dynamic site is kinda overkill for my needs. Since Misaki just renders to flat files it will let me do tons of cool Clojure-y stuff to generate my content, but not require me to manage a Java virtual machine on a 128Mb system.
