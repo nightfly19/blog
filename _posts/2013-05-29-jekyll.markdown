@@ -6,4 +6,4 @@ categories: [blogging]
 tags: [meta, Ruby, Jekyll, blogging]
 summary: "Switching to Jekyll now"
 ---
-[Misaki](https://github.com/liquidz/misaki) proved too heavy to render on my 128mb VPS. The little box just couldn't handle two JVM processes and when I lowered the heap size enough that it could handle it Clojure no longer had enough memory to run. Jekyll is what Misaki was inspired by and seems to be capable of everything I want.
+[Misaki](https://github.com/liquidz/misaki) proved too heavy to render on my 128Mb VPS. The little box just couldn't handle two JVM processes required to render my blog and when I lowered the heap size enough that it could handle it Clojure no longer had enough memory to run. Jekyll is what Misaki was inspired by and seems to be capable of everything I want.
