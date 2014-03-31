@@ -2,10 +2,14 @@
 
 repo='nightfly19.github.io'
 
+
 if [ "${TRAVIS_BRANCH}" != "master" ];then
     echo "Not master, not publishing";
     exit 0;
 fi
+
+git config --global user.email "nobody@nowhere.net"
+git config --global user.name "Jekyll Robot"
 
 git clone https://github.com/${SECURE_GITHUB_USERNAME}/${repo}.git && \
 
