@@ -1,7 +1,13 @@
-name: Sagenite
+name: nightfly19
 pygments: true
 github_user: 'nightfly19'
 twitter_user: 'nightfly19'
 freenode_user: 'nightfly'
 email_address: 'sage@sagenite.net'
 real_name: 'Sage Imel'
+tag_page_layout: tag_page
+tag_page_dir: tag
+sections:
+  - {title: "Blog", url: "/", name: 'blog'}
+  - {title: "About Me", url: "/about/", name: 'about'}
+  - {title: "Github", url: "http://github.com/nightfly19", name: 'github'}

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Jekyll"
-date: 2013-01-14 00:00:00
-categories: [blogging]
+date: 2013-05-29 00:00:00
+categories: [blog]
 tags: [meta, Ruby, Jekyll, blogging]
 summary: "Switching to Jekyll now"
 ---

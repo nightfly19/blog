@@ -1,57 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initiali-scale=1.0, user-scalable=yes" name="viewport">
-    <meta content="{{ page.summary }}" name="description">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
     <title>{{ page.title }}</title>
-    <link href="/favicon.ico" rel="shortcut icon">
-    <link href="/css/main.css" rel="stylesheet" type="text/css">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feeds/feed.xml">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/syntax.css" rel="stylesheet">
+    <link href="/css/sagenite.net.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
   </head>
+
   <body>
-    <div class="container">
-      <header>
-        <a href="/" id="title-link"><h1>{{ site.name }}</h1></a>
-        <nav>
-          <ul>
-            <li><a href="/">Blog</a>
-            <li><a href="/bio.html">Bio</a></li>
-            </li><li><a href="http://github.com/{{ site.github_user }}">Github</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div class="content-container">
-        <div class="content-pane">
-          <h2>{{ page.title }}</h2>
-          {{ content }}
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">{{ site.name }}</a>
         </div>
-        <div class="right-pane">
-          <p>
-            <h3>Recent Posts</h3>
-            <ul>
-              {% for post in site.posts reversed limit:10 %}
-              <li><span>{{ post.date | date_to_string }}</span>
-                <br />
-                <a href="{{ post.url }}">{{ post.title }}</a>
-              </li>
-              {% endfor %}
-            </ul>
-          </p>
-          <p>
-            <h3>Contact</h3>
-            <ul>
-              <li><span><a href="mailto:{{ site.email_address }}">Email</a></span></li>
-              <li><span><a href="http://twitter.com/{{ site.twitter_user }}">Twitter</a></span></li>
-              <li><span>Freenode: {{ site.freenode_user }}</span></li></ul></p>
-          <p>
-            <h3>Tags</h3>
-            {% tag_cloud %}
-          </p>
-</idv>
-</div>
-<footer>{{ site.real_name }} &copy;2013</footer>
-</div>
-</body>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            {% for section in site.sections %}
+            <li{% if page.section == section.name %} class="active"{% endif %}><a href="{{section.url}}">{{section.title}}</a></li>{% endfor %}
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+      {{ content }}
+      <hr>
+      &copy; {{ site.real_name }}
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+         ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+  </body>
 </html>
