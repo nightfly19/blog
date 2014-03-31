@@ -6,7 +6,8 @@ install:
 script:
   - pwd
   - ls
-  - jekyll build
   - cat ~/.ssh/.*.pub
+  - env
+  - jekyll build
   - ssh -o StrictHostKeyChecking=no git@github.com
   - git clone git@github.com:nightfly19/nightfly19.github.io.git
