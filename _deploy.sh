@@ -13,7 +13,7 @@ git config --global user.name "Jekyll Robot"
 
 git clone https://github.com/${SECURE_GITHUB_USERNAME}/${repo}.git && \
 
-rsync _site/ ./${repo}/ -tarv --delete --exclude=.git && \
+rsync _site/ ./${repo}/ -tar --delete --exclude=.git && \
 
 cd $repo && \
 
