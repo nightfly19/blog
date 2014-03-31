@@ -1,0 +1,7 @@
+language: ruby
+
+install:
+  - gem install jekyll jekyll-tagging
+
+script:
+  - true
