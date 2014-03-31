@@ -21,4 +21,4 @@ git add -A && \
 
 git commit -a -m "${TRAVIS_COMMIT}" && \
 
-git push https://${SECURE_GITHUB_USERNAME}:${SECURE_GITHUB_PASSWORD}@github.com/${SECURE_GITHUB_USERNAME}/${repo}.git master
+git push https://${SECURE_GITHUB_USERNAME}:${SECURE_GITHUB_PASSWORD}@github.com/${SECURE_GITHUB_USERNAME}/${repo}.git master &> /dev/null
