@@ -19,6 +19,11 @@ cd $repo && \
 
 git add -A && \
 
-git commit -a -m "${TRAVIS_COMMIT}" && \
+git commit -a -m "${TRAVIS_COMMIT}"
+
+if [ "$?" -eq "1" ];then
+    echo "Nothing changed, not publishing";
+    exit 0;
+fi
 
 git push https://${SECURE_GITHUB_USERNAME}:${SECURE_GITHUB_PASSWORD}@github.com/${SECURE_GITHUB_USERNAME}/${repo}.git master &> /dev/null
