@@ -6,7 +6,7 @@ install:
 script:
   - pwd
   - ls
-  - cat ~/.ssh/.*.pub
+  - ls $HOME/.ssh/
   - env
   - jekyll build
   - ssh -o StrictHostKeyChecking=no git@github.com
