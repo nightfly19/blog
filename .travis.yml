@@ -4,4 +4,6 @@ install:
   - gem install jekyll jekyll-tagging
 
 script:
-  - true
+  - pwd
+  - echo testing
+  - git clone git@github.com:nightfly19/nightfly19.github.io.git
